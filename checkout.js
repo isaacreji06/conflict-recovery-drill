@@ -1,7 +1,8 @@
 function checkout(items) {
-    console.log("Starting checkout...");
+    console.log("Starting checkout with discounts...");
     let total = items.reduce((sum, item) => sum + item.price, 0);
-    // Fix rounding issue
-    return Math.round(total * 100) / 100;
+    // Apply 10% discount
+    total = total * 0.10;
+    return total;
 }
 module.exports = checkout;
